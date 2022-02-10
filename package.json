@@ -1,0 +1,19 @@
+{
+  "name": "mercadopago",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.mjs"
+  },
+  "author": "Yhonatan Jesus",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.8.0"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.17.2"
+  }
+}
