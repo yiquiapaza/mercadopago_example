@@ -1,0 +1,42 @@
+[  
+  {
+    "id": "2c9380847ee4c6be017ee541fc290024",
+    "back_url": "https://www.mercadopago.com.br",
+    "collector_id": 431522259,
+    "application_id": 8486235508317426,
+    "reason": "Plan Pase Mensual Gold",
+    "status": "active",
+    "date_created": "2022-02-10T16:10:13.930-04:00",
+    "last_modified": "2022-02-10T16:10:13.930-04:00",
+    "init_point": "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380847ee4c6be017ee541fc290024",
+    "auto_recurring": {
+      "frequency": 1,
+      "frequency_type": "months",
+      "transaction_amount": 200,
+      "currency_id": "BRL",
+      "repetitions": 12,
+      "free_trial": "[Object]"
+    },
+    "payment_methods_allowed": {}
+  },
+  {
+    "id": "2c9380847f307303017f3240a786008f",
+    "back_url": "https://www.mercadopago.com.br",
+    "collector_id": 431522259,
+    "application_id": 8486235508317426,
+    "reason": "Test #1",
+    "status": "active",
+    "date_created": "2022-02-25T14:59:32.358-04:00",
+    "last_modified": "2022-02-25T14:59:32.358-04:00",
+    "init_point": "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380847f307303017f3240a786008f",
+    "auto_recurring": {
+      "frequency": 1,
+      "frequency_type": "days",
+      "transaction_amount": 1,
+      "currency_id": "BRL",
+      "repetitions": 12
+    },
+    "payment_methods_allowed": {}
+  }
+]
+ 
