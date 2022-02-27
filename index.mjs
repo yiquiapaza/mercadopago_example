@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import "dotenv/config";
 import express from "express";
 import axios from "axios";
 
@@ -7,9 +7,20 @@ import mercadopago from 'mercadopago';
 // Express config
 const app = express();
 app.use(express.json());
+app.use(express.static('public'));
+app.set("view engine", "pug");
+app.set("views", "./views");
+
 
 // Mercadopago config
 mercadopago.configurations.setAccessToken(process.env.ACCESS_TOKEN);
+
+
+// Views pug
+
+app.get('/', (req, res) => {
+    res.render('index', { title: 'MercadoPago API', message: 'Hello world'})
+});
 
 
 //! Create a front end 
