@@ -1,27 +1,33 @@
 extends general
 
 block script 
-    script(src='https://sdk.mercadopago.com/js/v2')
+  script(src='https://sdk.mercadopago.com/js/v2')
 
 block style 
-    link(rel="stylesheet", href="/css/bootstrap.min.css")
+  link(rel="stylesheet", href="/css/bootstrap.min.css")
 
 block meta
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 block content
-    nav.navbar.navbar-expand-md.navbar-light.justify-content-center
-        lu.nav.nav-pills.justify-content-center 
-            li.nav-item
-                a.nav-link(href='/') Home
-            li.nav-item
-                a.nav-link.active(href='/users') Users
-            li.nav-item 
-                a.nav-link(href='/plans') Plans
-            li.nav-item 
-                a.nav-link(href='/cards') Cards
-    
-    .container 
-    
+  nav.navbar.navbar-expand-md.navbar-light.justify-content-center
+    lu.nav.nav-pills.justify-content-center
+      li.nav-item
+        a.nav-link(href='/') Home
+      li.nav-item
+        a.nav-link.active(href='/users') Users
+      li.nav-item
+        a.nav-link(href='/plans') Plans
+      li.nav-item
+        a.nav-link(href='/cards') Cards
+  
+  .container
+    div
+      h1 Here list all users created for test
+
+    .container
+      form(action='/create-user' method='GET')
+        .mb-3
+          button(class='btn btn-primary' type='submit') Create User

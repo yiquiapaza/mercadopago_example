@@ -1,50 +1,50 @@
 extends general
 
 block script 
-    script(src='https://sdk.mercadopago.com/js/v2')
+  script(src='https://sdk.mercadopago.com/js/v2')
 
 block style 
-    link(rel="stylesheet", href="/css/bootstrap.min.css")
+  link(rel="stylesheet", href="/css/bootstrap.min.css")
 
 block meta
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 block content
-    nav.navbar.navbar-expand-md.navbar-light.justify-content-center
-        lu.nav.nav-pills 
-            li.nav-item
-                a.nav-link(href='/') Home
-            li.nav-item
-                a.nav-link(href='/users') Users
-            li.nav-item 
-                a.nav-link(href='/plans') Plans
-            li.nav-item 
-                a.nav-link.active(href='/cards') Cards
+  nav.navbar.navbar-expand-md.navbar-light.justify-content-center
+    lu.nav.nav-pills
+      li.nav-item
+        a.nav-link(href='/') Home
+      li.nav-item
+        a.nav-link(href='/users') Users
+      li.nav-item
+        a.nav-link(href='/plans') Plans
+      li.nav-item
+        a.nav-link.active(href='/cards') Cards
 
-    .container
-        form#form-checkout
-            .mb-3 
-                input(class='form-control' id='card__number' type='text' name='cardNumber' placeholder='Card Number')
-            .mb-3 
-                input(class='form-control' id='card__expiration__date' type='text' name='cardExpirationDate' placeholder='Card Expiration Date')
-            .mb-3 
-                input(class='form-control' id='card__holder__name' type='text' name='cardHolderName' placeholder='Card Holder Name')
-            .mb-3 
-                input(class='form-control' id='card__holder__email' type='text' name='cardHolderEmail' placeholder='Card Holder Email')
-            .mb-3 
-                input(class='form-control' id='card__security__code' type='text' name='cardSecurotyCode' placeholder='Security Code')
-            .mb-3
-                select(class='form-select' id='checkout__isuser' name='isuser')
-            .mb-3 
-                select(class='form-select' id='checkout__idntificationType' name='identificationType')
-            .mb-3
-                input(class='form-control' id='checkout__identification__number' type='text' name='identificationNumber' placeholder='Card Number')
-            .mb-3
-                select(class='form-select' id='checkout__installments' name='installments')
-            .mb-3 
-                button(class='btn btn-primary' type='submit' id='check__submit') Pay
+  .container
+    form#form-checkout
+      .mb-3
+        input(class='form-control' id='card__number' type='text' name='cardNumber' placeholder='Card Number')
+      .mb-3
+        input(class='form-control' id='card__expiration__date' type='text' name='cardExpirationDate' placeholder='Card Expiration Date')
+      .mb-3
+        input(class='form-control' id='card__holder__name' type='text' name='cardHolderName' placeholder='Card Holder Name')
+      .mb-3
+        input(class='form-control' id='card__holder__email' type='text' name='cardHolderEmail' placeholder='Card Holder Email')
+      .mb-3
+        input(class='form-control' id='card__security__code' type='text' name='cardSecurotyCode' placeholder='Security Code')
+      .mb-3
+        select(class='form-select' id='checkout__isuser' name='isuser')
+      .mb-3
+        select(class='form-select' id='checkout__idntificationType' name='identificationType')
+      .mb-3
+        input(class='form-control' id='checkout__identification__number' type='text' name='identificationNumber' placeholder='Card Number')
+      .mb-3
+        select(class='form-select' id='checkout__installments' name='installments')
+      .mb-3
+        button(class='btn btn-primary' type='submit' id='check__submit') Pay
 
 block mercadopago
-    script(src='/javascript/mercadopago.js')
+  script(src='/javascript/mercadopago.js')
