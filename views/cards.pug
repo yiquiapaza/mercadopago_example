@@ -26,21 +26,23 @@ block content
   .container
     form#form-checkout
       .mb-3
-        input(class='form-control' id='card__number' type='text' name='cardNumber' placeholder='Card Number')
+        input(class='form-control' id='card__number' type='text' name='cardNumber' )
       .mb-3
-        input(class='form-control' id='card__expiration__date' type='text' name='cardExpirationDate' placeholder='Card Expiration Date')
+        input(class='form-control' id='card__holder__email' type='text' name='cardHolderEmail' )
       .mb-3
-        input(class='form-control' id='card__holder__name' type='text' name='cardHolderName' placeholder='Card Holder Name')
+        input(class='form-control' id='card__expiration__date__month' type='text' name='cardExpirationDateMonth' )
       .mb-3
-        input(class='form-control' id='card__holder__email' type='text' name='cardHolderEmail' placeholder='Card Holder Email')
+        input(class='form-control' id='card__expiration__date__year' type='text' name='cardExpirationDateYear' )
       .mb-3
-        input(class='form-control' id='card__security__code' type='text' name='cardSecurotyCode' placeholder='Security Code')
+        input(class='form-control' id='card__holder__name' type='text' name='cardHolderName' )
       .mb-3
-        select(class='form-select' id='checkout__isuser' name='isuser')
+        input(class='form-control' id='card__security__code' type='text' name='cardSecurotyCode' )
       .mb-3
-        select(class='form-select' id='checkout__idntificationType' name='identificationType')
+        select(class='form-select' id='checkout__issuer' name='issuer')
       .mb-3
-        input(class='form-control' id='checkout__identification__number' type='text' name='identificationNumber' placeholder='Card Number')
+        select(class='form-select' id='checkout__identification__type' name='identificationType')
+      .mb-3
+        input(class='form-control' id='checkout__identification__number' type='text' name='identificationNumber' )
       .mb-3
         select(class='form-select' id='checkout__installments' name='installments')
       .mb-3

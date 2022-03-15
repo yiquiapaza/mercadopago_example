@@ -1,4 +1,5 @@
 import express from 'express';
+import { listUsers } from '../services/users.mjs';
 
 const router = express.Router();
 
@@ -7,7 +8,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/users', (req, res) => {
-  res.render('users');
+  let users = listUsers
+  res.render('users', users);
 });
 
 router.get('/plans', (req, res) => {

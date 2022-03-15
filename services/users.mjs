@@ -1,7 +1,13 @@
 import 'dotenv/config';
 import axios from 'axios';
 
-export async function userCreate() {
+import { readFile } from 'fs/promises';
+
+const users = JSON.parse(
+  await readFile(new URL('../data/users.json', import.meta.url))
+);
+
+export async function createUser() {
   const response = await 
     axios.post(process.env.ENDPOINT_CREATE_USER, 
       { 'site_id': 'MLB'},
@@ -18,4 +24,10 @@ export async function userCreate() {
       return error;
     });
   return response;
+}
+
+
+export const listUsers = () => {
+  console.log(users);
+  return users;
 }

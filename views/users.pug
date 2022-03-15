@@ -26,8 +26,10 @@ block content
   .container
     div
       h1 Here list all users created for test
-
-    .container
-      form(action='/create-user' method='GET')
-        .mb-3
-          button(class='btn btn-primary' type='submit') Create User
+      ul
+        each user in users
+          li= user
+  .container
+    form(action='/create-user' method='GET')
+      .mb-3
+        button(class='btn btn-primary' type='submit') Create User

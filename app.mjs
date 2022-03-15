@@ -1,7 +1,7 @@
 import express from 'express';
 import routes from './routes/index.mjs'
 
-import cards from './controllers/cards.mjs';
+//import users from './controllers/users.mjs';
 
 const app = express();
 
@@ -12,6 +12,6 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 app.use('/', routes);
-app.use('/', cards);
+//app.use('/', users);
 
 export default  app;
