@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-undef
-const mp = new MercadoPago('', { locale: 'pt-BR' } );
+const mp = new MercadoPago('', { locale: 'pt-BR' });
 
 const cardForm = mp.cardForm({
-  amount: '8.00',
+  amount: '1.00',
   autoMout: true,
   form: {
     id: 'form-checkout',
@@ -56,6 +56,10 @@ const cardForm = mp.cardForm({
       if (error) return console.warn('Form Unmounted handling error: ', error)
       console.log('Form unmounted')
     },
+    onCardTokenReceived: (error, token) => {
+      if (error) return console.warn('Token handling error: ', error)
+      console.log('Token available: ', token)
+    },
     onSubmit: event => {
       event.preventDefault();
       const cardData = cardForm.getCardFormData();
@@ -63,10 +67,10 @@ const cardForm = mp.cardForm({
     },
     onFetching: resource => {
       return () => {
-        console.log('Fetching resource: ', resource)
+        console.log('Fetching resource: ', resource);
       }
     }
   }
 });
 
-console.log(cardForm);
+

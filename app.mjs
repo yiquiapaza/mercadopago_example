@@ -1,8 +1,6 @@
 import express from 'express';
 import routes from './routes/index.mjs'
-
 //import users from './controllers/users.mjs';
-
 const app = express();
 
 app.use(express.json());
